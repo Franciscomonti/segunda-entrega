@@ -1,0 +1,988 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+
+/* Estructura index con grid */
+.gridindex{
+    display: grid;
+    grid-template-areas:'header'
+                        'frase'
+                        'main'
+                        'frase2'
+                        'Videosection'
+                        'footer';
+    width: 100%;
+}
+
+/* ---Header--Index--- */
+
+.IndexHeader{
+    grid-area: 'header';
+    width: 100%;
+}
+
+/* ---Nav-Bar--- */
+
+.NavBarSec{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000000;
+    flex-wrap: wrap;
+    width: 100%;
+    position: fixed top;
+}
+
+.NavBarSec ul{
+    display: flex;
+    list-style: none;
+    margin:auto 0px;
+}
+
+.NavBarSec ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 0px 40px;
+    
+}
+
+.NavBarSec ul li{
+    border-left: 1px white solid;
+}
+
+.NavBarSec ul li:last-child{
+    border-right: 1px white solid;
+}
+
+.NavBarSec ul li:hover{
+    background-color: #f77f00;
+}
+
+.NavBarSec div{
+    display: flex;
+}
+
+.NavBarSec img{
+    width: 70px;
+    animation: rotationy 7s infinite linear;
+}
+
+.NavBarSec div p{
+    color: white;
+    margin: auto;
+    font-size: 2em;
+}
+
+/* Efecto logo rotatorio */
+@keyframes rotationy {
+    from {
+    transform: rotatey(0deg);
+    }
+    50% {
+    transform: rotatey(0deg);
+    }
+    to {
+    transform: rotatey(359deg);
+    }
+}
+
+/* Div Video Principal */
+
+.video video{
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Index Frase */
+
+.IndexFrase{
+    grid-area: 'frase';
+    color: white;
+    width: 90%;
+    margin:100px auto 100px;
+    padding: 20px 100px;
+}
+
+.IndexFrase h2{
+    color:#f77f00;
+    font-size: 3em;
+    padding: 0px 0px 40px;
+}
+
+.IndexFrase p{
+    font-size:1.5em;
+    text-align: justify;
+    border-top: 1px white solid;
+    padding: 40px 0px 0px;
+}
+
+/* carrusel bootstrap index */
+.carousel{
+    width: 70%;
+    margin: 100px auto;
+}
+
+.carousel-inner{
+    width: 80%;
+    margin: auto;
+}
+.carousel img{
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    margin: auto 0px;
+    width: 5%;
+}
+
+/* Links secciones con imagenes */
+
+.IndexMain{
+    grid-area: 'main';
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 80vh;
+    width: 70%;
+    grid-gap: 30px 20px;
+    margin: 50px auto;
+}
+
+.LinkGallery{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-image: url(../img/2.jpg);
+}
+
+
+.LinkCasamiento{
+    grid-column: 1/3;
+    grid-row: 2/4;
+    background-image: url(../img/10.jpg);
+}
+
+.LinkBooks{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-image: url(../img/4.jpg);
+}
+
+.LinkSweet{
+    grid-column: 3/4;
+    grid-row: 3/4;
+    background-image: url(../img/7.jpg);
+}
+
+
+.LinkAbout{
+    grid-column: 4/5;
+    grid-row: 3/4;
+    background-image: url(../img/6.jpg);
+}
+
+.LinkContacto{
+    grid-column: 3/5;
+    grid-row: 1/3;
+    background-image: url(../img/5.jpg);
+}
+
+.IndexMain a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 2em;
+    transition: 0.7s;
+    text-shadow: 2px 2px 2px #00000090 ;
+    box-shadow: 2px 2px 2px #00000090 ;
+}
+
+.IndexMain a:hover{
+    transform: scale(1.2);
+}
+
+/* video antes del footer */
+
+.VideoSection{
+    grid-area: 'Videosection';
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0px auto 40px;
+    flex-wrap: wrap;
+}
+
+.vid{
+    width: 100%;
+    align-self: center;
+}
+
+.VideoParrafo{
+    color: white;
+    margin: 10px 20px;
+    width: 100%;
+    text-align: justify;
+}
+
+.VideoSection .VideoParrafo h2{
+    font-size: 2.5em;
+    color:#f77f00;
+}
+
+.VideoSection .VideoParrafo p{
+    font-size: 1.2em;
+}
+
+/* Footer Fin De Pagina */
+
+.IndexFooter{
+    grid-area: 'footer';
+    display: flex;
+    width: 100%;
+    border-top: 1px white solid;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+
+
+.IndexFooter ul{
+    display: flex;
+    margin: auto;
+}
+
+.IndexFooter ul li{
+    list-style: none;
+}
+
+
+.IndexFooter ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.IndexFooter ul li img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.IndexFooter ul li a:hover img{
+animation: vibracion 0.5s linear infinite;
+
+}
+
+.IndexFooter ul li a:hover{
+    color: #f77f00;
+}
+
+@keyframes vibracion {
+    from {
+    transform: rotate(-10deg);
+    }
+    50% {
+    transform: rotate(10deg);
+    }
+    to {
+    transform: rotate(-10deg);
+    }
+}
+
+/* Footer Logo mas Frase */
+
+.IndexFooter div{
+    color: white;
+    padding: 0px auto;
+    margin: auto  ;
+    font-size: 1.5em;
+    display:flex;
+    align-items: center;
+    height: 150px;
+}
+
+.IndexFooter div p{
+    margin: auto 0px;
+}
+.IndexFooter .Logo img{
+    width: 100px;
+}
+
+/* Pagina Galery */
+
+.GalleryImgPage{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+    width: 70%;
+    height: 1000px;
+    margin: 50px auto ;
+    grid-gap: 10px 20px;
+}
+
+.GalleryImgPage span{
+    background-position: center;
+    background-size:cover ;
+    transition: 0.8s;
+}
+
+
+.GalleryImgPage span:hover{
+    font-size: 50px;
+    filter: none;
+    transform: scale(1.2);
+    z-index: 100;
+    box-shadow: 2px 2px 2px #00000090 ;
+}
+
+
+
+.GalleryImgPage .img1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-image: url(../img/b1.jpg);
+}
+
+.GalleryImgPage .img2{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    background-image: url(../img/b2.jpg);
+}
+
+.GalleryImgPage .img3{
+    grid-column: 1/2;
+    grid-row: 2/4;
+    background-image: url(../img/b3.jpg);
+}
+
+.GalleryImgPage .img4{
+    grid-column: 2/4;
+    grid-row: 3/4;
+    background-image: url(../img/b4.jpg);
+}
+
+.GalleryImgPage .img5{
+    grid-column: 3/5;
+    grid-row: 1/2;
+    background-image: url(../img/b5.jpg);
+}
+
+.GalleryImgPage .img6{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    background-image: url(../img/b6.jpg);
+}
+
+.GalleryImgPage .img7{
+    grid-column: 4/5;
+    grid-row: 2/3;
+    background-image: url(../img/b7.jpg);
+}
+
+.GalleryImgPage .img8{
+    grid-column: 4/5;
+    grid-row: 3/5;
+    background-image: url(../img/b8.jpg);
+}
+
+.GalleryImgPage .img9{
+    grid-column: 1/3;
+    grid-row: 4/5;
+    background-image: url(../img/b9.jpg);
+}
+
+.GalleryImgPage .img10{
+    grid-column: 3/4;
+    grid-row: 4/5;
+    background-image: url(../img/b10.jpg);
+}
+
+/* Gallery Imagenes Casamiento */
+
+.GalleryImgPage .imgc1{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-image: url(../img/c1.jpg);
+}
+
+.GalleryImgPage .imgc2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-image: url(../img/c2.jpg);
+}
+
+.GalleryImgPage .imgc3{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-image: url(../img/c3.jpg);
+}
+
+.GalleryImgPage .imgc4{
+    grid-column: 2/4;
+    grid-row: 3/4;
+    background-image: url(../img/c4.jpg);
+}
+
+.GalleryImgPage .imgc5{
+    grid-column: 3/5;
+    grid-row: 1/2;
+    background-image: url(../img/c5.jpg);
+}
+
+.GalleryImgPage .imgc6{
+    grid-column: 2/4;
+    grid-row: 2/3;
+    background-image: url(../img/c6.jpg);
+}
+
+.GalleryImgPage .imgc7{
+    grid-column: 4/5;
+    grid-row: 2/3;
+    background-image: url(../img/c7.jpg);
+}
+
+.GalleryImgPage .imgc8{
+    grid-column: 4/5;
+    grid-row: 3/5;
+    background-image: url(../img/c8.jpg);
+}
+
+.GalleryImgPage .imgc9{
+    grid-column: 1/3;
+    grid-row: 4/5;
+    background-image: url(../img/c9.jpg);
+}
+
+.GalleryImgPage .imgc10{
+    grid-column: 3/4;
+    grid-row: 4/5;
+    background-image: url(../img/c10.jpg);
+}
+
+
+/*  media query pantalla menores a 1300px */
+
+@media only screen and (max-width: 1300px){
+
+*{
+    font-size: 14px;
+}
+
+/* Index Frase */
+
+.IndexFrase{
+    margin:50px auto 50px;
+    padding: 10px 50px;
+}
+
+.IndexFrase h2{
+    padding: 0px 0px 20px;
+}
+
+.IndexFrase p{
+    padding: 20px 0px 0px;
+}
+
+/* carrusel bootstrap index */
+
+.carousel{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.carousel-inner{
+    width: 80%;
+}
+
+.carousel img{
+    height: 300px;
+}
+
+
+/* video antes del footer */
+
+.VideoParrafo{
+    margin: 5px 20px;
+}
+
+/* Footer Fin De Pagina */
+
+.IndexFooter ul li a{
+    padding: 15px;
+}
+
+/* Footer Logo mas Frase */
+
+.IndexFooter .Logo img{
+    width: 80px;
+}
+
+}
+
+/* media query pantallas menores a 1000px */
+
+@media only screen and (max-width: 1000px){
+*{
+    font-size: 13px;
+}
+/* ---Nav-Bar--- */
+
+.NavBarSec{
+    flex-direction: column;
+}
+
+.NavBarSec ul{
+    margin:auto 0px 10px;
+}
+
+.NavBarSec div{
+    align-self: flex-start;
+    margin-left:20px;
+}
+
+/* Div Video Principal */
+
+.video video{
+    height: 60vh;
+}
+
+/* Index Frase */
+
+.IndexFrase{
+    margin:40px auto 40px;
+    padding: 10px 30px;
+}
+
+/* carrusel bootstrap index */
+
+.carousel{
+    width: 90%;
+}
+
+/* Links secciones con imagenes */
+
+.IndexMain{
+    height: 70vh;
+    width: 90%;
+}
+
+/* video antes del footer */
+
+.VideoSection{
+    width: 90%;
+}
+
+/* Footer Fin De Pagina */
+
+.IndexFooter{
+    flex-direction: column-reverse;
+}
+
+/* Footer Logo mas Frase */
+
+.IndexFooter div{
+    height: 90px;
+    flex-direction: row-reverse;
+    justify-content: end;
+    width: 100%;
+}
+
+/* Pagina Galery */
+
+.GalleryImgPage{
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    height: 800px;
+}
+
+
+.GalleryImgPage .img1{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+.GalleryImgPage .img2{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.GalleryImgPage .img3{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.GalleryImgPage .img4{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.GalleryImgPage .img5{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.GalleryImgPage .img6{
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+.GalleryImgPage .img7{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.GalleryImgPage .img8{
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.GalleryImgPage .img9{
+    grid-column: 1/3;
+    grid-row: 4/5;
+}
+
+.GalleryImgPage .img10{
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+/* Gallery Imagenes Casamiento */
+
+.GalleryImgPage .imgc1{
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.GalleryImgPage .imgc2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.GalleryImgPage .imgc3{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.GalleryImgPage .imgc4{
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
+
+.GalleryImgPage .imgc5{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.GalleryImgPage .imgc6{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.GalleryImgPage .imgc7{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.GalleryImgPage .imgc8{
+    grid-column: 4/5;
+    grid-row: 3/5;
+}
+
+.GalleryImgPage .imgc9{
+    grid-column: 1/3;
+    grid-row: 4/5;
+}
+
+.GalleryImgPage .imgc10{
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+}
+
+/* media query pantallas menores a 700px */
+
+@media only screen and (max-width: 699px){
+    *{
+        font-size: 11px;
+    }
+
+    /* video antes del footer */
+
+.VideoSection{
+    grid-template-rows: 1fr 1fr;
+    width: 90%;
+    margin: 0px auto 10px;
+}
+
+.vid{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+.VideoParrafo{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin: 10px 0px;
+
+}
+
+    /* Footer Fin De Pagina */
+
+    .IndexFooter ul li img{
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    /* Footer Logo mas Frase */
+
+.IndexFooter .Logo img{
+    width: 70px;
+}
+
+/* Pagina Galery */
+
+.GalleryImgPage{
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    height: 600px;
+    grid-gap: 5px 10px;
+}
+}
+
+/* media query pantallas menores a 600px */
+
+@media only screen and (max-width: 599px){
+    *{
+        font-size: 10px;
+    }
+
+/* ---Nav-Bar--- */
+
+.NavBarSec ul a{
+    padding: 0px 25px;
+}
+
+.NavBarSec img{
+    width: 50px;
+}
+
+/* Div Video Principal */
+
+.video video{
+    height: 50vh;
+}
+
+/* Index Frase */
+
+.IndexFrase{
+    margin:20px auto 20px;
+    padding: 5px 15px;
+}
+
+.IndexFrase h2{
+    padding: 0px 0px 10px;
+}
+
+.IndexFrase p{
+    padding: 10px 0px 0px;
+}
+
+/* carrusel bootstrap index */
+
+.carousel{
+    margin: 30px auto;
+}
+
+.carousel img{
+    height: 180px;
+}
+
+
+/* Links secciones con imagenes */
+
+.IndexMain{
+    grid-template-rows: repeat(4, 1fr);
+    height: 60vh;
+    grid-gap: 20px 10px;
+    margin: 60px auto;
+}
+
+.LinkGallery{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+
+.LinkCasamiento{
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.LinkBooks{
+    grid-column: 1/3;
+    grid-row: 3/5;
+}
+
+.LinkSweet{
+    grid-column: 3/5;
+    grid-row: 3/4;
+}
+
+
+.LinkAbout{
+    grid-column: 3/5;
+    grid-row: 4/5;
+}
+
+.LinkContacto{
+    grid-column: 3/5;
+    grid-row: 1/3;
+}
+
+/* Footer Fin De Pagina */
+
+.IndexFooter ul li img{
+    width: 20px;
+}
+
+
+.IndexFooter ul{
+    flex-wrap: wrap;
+}
+
+.IndexFooter ul a{
+    flex-direction: column;
+}
+
+.IndexFooter .Logo img{
+    display: none;
+}
+
+.IndexFooter div{
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* Pagina Galery */
+
+.GalleryImgPage{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 750px;
+}
+
+
+.GalleryImgPage .img1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.GalleryImgPage .img2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.GalleryImgPage .img3{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.GalleryImgPage .img4{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.GalleryImgPage .img5{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.GalleryImgPage .img6{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.GalleryImgPage .img7{
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.GalleryImgPage .img8{
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.GalleryImgPage .img9{
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+.GalleryImgPage .img10{
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+
+/* Gallery Imagenes Casamiento */
+
+.GalleryImgPage .imgc1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.GalleryImgPage .imgc2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.GalleryImgPage .imgc3{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.GalleryImgPage .imgc4{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.GalleryImgPage .imgc5{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.GalleryImgPage .imgc6{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.GalleryImgPage .imgc7{
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.GalleryImgPage .imgc8{
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.GalleryImgPage .imgc9{
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+.GalleryImgPage .imgc10{
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+}
