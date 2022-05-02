@@ -337,7 +337,6 @@ animation: vibracion 0.5s linear infinite;
     transition: 0.8s;
 }
 
-
 .GalleryImgPage span:hover{
     font-size: 50px;
     filter: none;
@@ -345,8 +344,6 @@ animation: vibracion 0.5s linear infinite;
     z-index: 100;
     box-shadow: 2px 2px 2px #00000090 ;
 }
-
-
 
 .GalleryImgPage .img1{
     grid-column: 1/2;
