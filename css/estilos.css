@@ -33,7 +33,8 @@
     background-color: #000000;
     flex-wrap: wrap;
     width: 100%;
-    position: fixed top;
+    position: fixed;
+    z-index: 100;
 }
 
 .NavBarSec ul{
